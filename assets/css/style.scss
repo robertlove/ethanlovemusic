@@ -1,9 +1,9 @@
 ---
 ---
 
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1/font/bootstrap-icons.min.css");
 @import "variables";
 @import "bootstrap/bootstrap";
+@import "bootstrap-icons";
 
 $navbar-height: $navbar-brand-height + ($navbar-brand-padding-y * 2) + ($navbar-padding-y * 2) + 1 !default;
 
