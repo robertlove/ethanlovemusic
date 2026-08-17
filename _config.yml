@@ -5,3 +5,8 @@ url: "https://ethanlovemusic.com"
 
 exclude:
   - README.md
+  - purgecss.config.js
+  - Rakefile
+
+# sass:
+#   style: :compressed
