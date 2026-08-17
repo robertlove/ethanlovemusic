@@ -5,9 +5,15 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 
+$navbar-height: $navbar-brand-height + ($navbar-brand-padding-y * 2) + ($navbar-padding-y * 2) + 1 !default;
+
 .cover {
   background-image: url({{- '/assets/img/cover.jpg' | relative_url -}});
   background-position: 50% 50%;
   background-size: cover;
-  height: 50em
+  padding-top: $navbar-height;
+  p {
+    font-size: 10rem;
+    line-height: 10rem;
+  }
 }
