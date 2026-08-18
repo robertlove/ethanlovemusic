@@ -71,16 +71,7 @@
       </div>
     </nav>
 
-    <header class="cover">
-      <div class="container py-5">
-        <h1 class="visually-hidden">{{ site.title }}</h1>
-        <p>{{ site.description | replace: ' ', '<br>' }}</p>
-      </div>
-    </header>
-
-    <main>
-      {{ content }}
-    </main>
+    {{ content }}
 
     <section class="modal fade" id="contact" tabindex="-1" aria-labelledby="contact-label" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
