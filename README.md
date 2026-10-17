@@ -13,8 +13,6 @@ cd ethanlovemusic
 
 ```shell
 bundle install
-npm install -g purgecss
-gem install html-proofer
 ```
 
 ## Usage
@@ -23,18 +21,6 @@ gem install html-proofer
 
 ```shell
 bundle exec jekyll serve
-```
-
-### Remove unused CSS
-
-```shell
-purgecss --config ./purgecss.config.js
-```
-
-### Check HTML
-
-```shell
-htmlproofer ./_site --swap-urls '^/ethanlovemusic/:/'
 ```
 
 ## Contributing

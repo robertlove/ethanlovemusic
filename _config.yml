@@ -1,17 +1,8 @@
 title: Ethan Love Music
-description: "Mind Blowing Stuff"
-baseurl: ""
-url: "https://ethanlovemusic.com"
-language: en
-region: AU
-theme_color: "#20c997"
-instagram: "https://www.instagram.com/ethanlove.music"
-youtube: "https://www.youtube.com/@ethanlovemusic"
+description: Mind Blowing Stuff
+baseurl:
+url: https://ethanlove.music
 
 exclude:
   - README.md
-  - purgecss.config.js
   - Rakefile
-
-# sass:
-#   style: :compressed
