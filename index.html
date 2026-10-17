@@ -3,35 +3,23 @@ layout: default
 ---
 
 <main>
-  <section class="my-12">
-    <div class="container">
-      <div class="row gy-8 row-cols-1 md:row-cols-2 lg:row-cols-3 xl:row-cols-4">
-        {% for video in site.data.videos %}
-          <div class="col">
-
-            <div class="card h-100">
-              <a href="https://www.youtube.com/watch?v={{- video.id -}}" target="_blank">
-                <img class="card-img-top" src="https://i.ytimg.com/vi_webp/{{- video.id -}}/maxresdefault.webp" alt="{{ video.title | escape }} by {{ video.artist | escape }} - Drum cover by Ethan Love">
-              </a>
-              <div class="card-body">
-                <h2 class="card-title fs-md">{{ video.title | escape }} by {{ video.artist | escape }}</h2>
-                <p class="card-text fs-sm fg-2">Drum cover by Ethan Love</p>
-              </div>
+  <h1 class="visually-hidden">{{- site.title -}}</h1>
+  <section class="container my-8">
+    <h2 class="fw-light mb-8">Latest videos</h2>
+    <div class="row gy-8 row-cols-1 md:row-cols-2 lg:row-cols-3 xl:row-cols-4">
+      {% for video in site.data.videos %}
+        <div class="col">
+          <div class="card h-100">
+            <a href="https://www.youtube.com/watch?v={{- video.id -}}" target="_blank">
+              <img class="card-img-top" src="https://i.ytimg.com/vi_webp/{{- video.id -}}/maxresdefault.webp" alt="{{ video.title | escape }} by {{ video.artist | escape }} - Drum cover by Ethan Love">
+            </a>
+            <div class="card-body">
+              <h3 class="card-title fs-md">{{ video.title | escape }} by {{ video.artist | escape }}</h3>
+              <p class="card-text fs-sm fg-2">Drum cover by Ethan Love</p>
             </div>
-
-            <!-- <a class="card h-100">
-              <div class="card-body">
-                <a href="https://www.youtube.com/watch?v={{- video.id -}}" target="_blank">
-                  <img class="" src="https://img.youtube.com/vi/{{- video.id -}}/1.jpg" alt="...">
-                </a>
-                <h2 class="card-title fs-md">{{ video.title | escape }} by {{ video.artist | escape }}</h2>
-                <p class="card-text"><small class="fg-2">Drum cover by Ethan Love</small></p>
-              </div>
-            </a> -->
-
           </div>
-        {% endfor %}
-      </div>
+        </div>
+      {% endfor %}
     </div>
   </section>
 </main>
