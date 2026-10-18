@@ -1,5 +1,7 @@
 # Ethan Love Music
 
+Multi-instrumentalist in Sydney, Australia. Drums, guitar, bass, and keyboards. Covers and original compositions. @ethanlove.music.
+
 ## Installation
 
 ### Clone repository
@@ -13,6 +15,8 @@ cd ethanlovemusic
 
 ```shell
 bundle install
+npm i -g purgecss
+npm i -g lightningcss-cli
 ```
 
 ## Usage
@@ -21,6 +25,18 @@ bundle install
 
 ```shell
 bundle exec jekyll serve
+```
+
+### Remove unused CSS
+
+```shell
+purgecss --config ./purgecss.config.js
+```
+
+### Minify CSS
+
+```shell
+lightningcss --minify ./_site/assets/css/style.css -o ./_site/assets/css/style.css
 ```
 
 ## Contributing
