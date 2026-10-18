@@ -39,10 +39,6 @@ purgecss --config ./purgecss.config.js
 lightningcss --minify ./_site/assets/css/style.css -o ./_site/assets/css/style.css
 ```
 
-## Contributing
-
-See [Contributing](https://github.com/robertlove/.github/blob/master/CONTRIBUTING.md).
-
 ## Credits
 
 See [Contributors](https://github.com/robertlove/ethanlovemusic/graphs/contributors).
