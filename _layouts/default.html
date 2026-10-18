@@ -1,15 +1,46 @@
+{%- assign site_name = site.title -%}
+{%- assign title = site_name -%}
+{%- assign description = site.description -%}
+{%- assign url = site.url -%}
+{%- assign image = '/assets/img/image.jpg' | absolute_url -%}
+
+{%- if page.url != '/' -%}
+  {%- assign title = page.title | append: ' | ' | append: site_name -%}
+  {%- assign description = page.description -%}
+{%- endif -%}
+
+{%- assign title = title | trim | escape -%}
+{%- assign description = description | trim | escape -%}
+
 <!doctype html>
-<html lang="en" data-bs-theme="dark">
+<html lang="{{- site.language -}}" prefix="og: https://ogp.me/ns#" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{- site.title -}}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ image }}">
+    <meta name="twitter:image:alt" content="{{ site_name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ site_name }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:image" content="{{ image }}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="{{ site_name }}">
+    <meta property="og:locale" content="{{- site.language -}}_{{- site.region -}}">
+    <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/icon.svg' | relative_url }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <title>{{ title }}</title>
   </head>
   <body>
-    <header class="navbar navbar-translucent">
+    <header class="navbar navbar-translucent sticky-top">
       <div class="container">
         <a class="navbar-brand" href="{{ '/' | relative_url }}">{{- site.title -}}</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +66,9 @@
         </dialog>
       </div>
     </header>
-    {{ content }}
+    <main>
+      {{ content }}
+    </main>
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

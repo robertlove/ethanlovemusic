@@ -1,8 +1,9 @@
 title: Ethan Love Music
-description: Mind Blowing Stuff
+description: Multi-instrumentalist in Sydney, Australia. Drums, guitar, bass, and keyboards. Covers and original copositions. @ethanlove.music.
 baseurl:
 url: https://ethanlove.music
-
+language: en
+region: AU
 exclude:
-  - README.md
   - Rakefile
+  - README.md
