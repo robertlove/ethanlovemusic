@@ -56,8 +56,8 @@
               {% for item in site.data.nav %}
                 <li class="nav-item">
                   <a class="nav-link" href="{{- item.url -}}" target="_blank">
-                    <i class="bi bi-{{- item.title | downcase -}}"></i>
-                    {{- item.title -}}
+                    <i class="bi bi-{{ item.title | downcase }}"></i>
+                    {{ item.title }}
                   </a>
                 </li>
               {% endfor %}
