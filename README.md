@@ -30,13 +30,13 @@ bundle exec jekyll serve
 ### Remove unused CSS
 
 ```shell
-purgecss --config ./purgecss.config.js
+npx purgecss --config ./purgecss.config.js
 ```
 
 ### Minify CSS
 
 ```shell
-lightningcss --minify ./_site/assets/css/style.css -o ./_site/assets/css/style.css
+npx lightningcss --minify ./_site/assets/css/style.css -o ./_site/assets/css/style.css
 ```
 
 ## Credits
