@@ -1,0 +1,32 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>{{- site.url -}}</id>
+  <title>{{- site.title | xml_escape -}}</title>
+  <updated>{{- site.data.videos.first.date -}}</updated>
+  <author>
+    <name>{{- site.author | xml_escape -}}</name>
+  </author>
+  <link rel="self" href="{{- '/feed.xml' | relative_url -}}"/>
+  <category term="music" label="Music"/>
+  <icon>{{- '/assets/img/icon.svg' | relative_url -}}</icon>
+  <rights type="html">&amp;copy; {{ site.data.videos.first.date | date: '%Y' }} {{ site.title }}</rights>
+  <subtitle>{{- site.description | xml_escape -}}</subtitle>
+
+  {% for video in site.data.videos %}
+    <entry>
+      <id>https://www.youtube.com/watch?v={{- video.id -}}</id>
+      <title>{{ video.title | xml_escape }} by {{ video.artist | xml_escape }} - Drum cover by {{ site.author | xml_escape }}</title>
+      <updated>{{- video.date -}}</updated>
+      <author>
+        <name>{{- site.author | xml_escape -}}</name>
+      </author>
+      <link rel="alternate" href="https://www.youtube.com/watch?v={{- video.id -}}"/>
+      <category term="music" label="Music"/>
+      <published>{{- video.date -}}</published>
+      <rights type="html">&amp;copy; {{ video.date | date: '%Y' }} {{ site.title }}</rights>
+    </entry>
+  {% endfor %}
+
+</feed>
