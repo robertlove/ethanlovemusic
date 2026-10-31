@@ -2,8 +2,9 @@ title: Ethan Love Music
 description: Multi-instrumentalist in Sydney, Australia. Drums, guitar, bass, and keyboards. Covers and original compositions.
 baseurl:
 url: https://ethanlove.music
-language: en
+lang: en
 region: AU
+author: Ethan Love
 exclude:
   - purgecss.config.js
   - Rakefile
