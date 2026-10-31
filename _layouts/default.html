@@ -13,7 +13,7 @@
 {%- assign description = description | trim | escape -%}
 
 <!doctype html>
-<html lang="{{- site.language -}}" prefix="og: https://ogp.me/ns#" data-bs-theme="dark">
+<html lang="{{- site.lang -}}" prefix="og: https://ogp.me/ns#" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,7 +33,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ site_name }}">
-    <meta property="og:locale" content="{{- site.language -}}_{{- site.region -}}">
+    <meta property="og:locale" content="{{- site.lang -}}_{{- site.region -}}">
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/icon.svg' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{- site.time | date: '%s' -}}">
     <title>{{ title }}</title>
@@ -60,6 +60,12 @@
                   </a>
                 </li>
               {% endfor %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{- '/feed.xml' | relative_url -}}" target="_blank">
+                  <i class="bi bi-rss"></i>
+                  Subscribe
+                </a>
+              </li>
             </ul>
           </div>
         </dialog>
