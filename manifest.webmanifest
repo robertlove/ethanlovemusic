@@ -1,0 +1,20 @@
+---
+---
+{
+  "lang": "{{- site.lang -}}",
+  "dir": "ltr",
+  "name": "{{- site.name -}}",
+  "short_name": "{{- site.name -}}",
+  "icons": [{
+    "src": "{{ '/icon.png' | relative_url }}",
+    "sizes": "180x180",
+    "type": "image/png"
+  }],
+  "scope": "{{- '/' | relative_url -}}",
+  "id": "{{- site.url -}}",
+  "start_url": "{{- '/' | relative_url -}}",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "{{- site.theme_color -}}",
+  "background_color": "{{- site.background_color -}}"
+}
