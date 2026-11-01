@@ -2,28 +2,29 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>{{- site.url -}}</id>
+  <id>{{- '/' | absolute_url -}}</id>
   <title>{{- site.name | xml_escape -}}</title>
-  <updated>{{- site.data.videos.first.date -}}</updated>
+  <subtitle>{{- site.description | xml_escape -}}</subtitle>
+  <category term="music" label="Music"/>
+  <icon>{{- '/assets/img/icon.png' | relative_url -}}</icon>
   <author>
     <name>{{- site.author | xml_escape -}}</name>
   </author>
-  <link rel="self" href="{{- '/feed.xml' | relative_url -}}"/>
-  <category term="music" label="Music"/>
-  <icon>{{- '/assets/img/icon.svg' | relative_url -}}</icon>
+  <updated>{{- site.time | date: site.datetime_format -}}</updated>
+  <link rel="self" href="{{- '/feed.xml' | absolute_url -}}"/>
   <rights type="html">&amp;copy; {{ site.data.videos.first.date | date: '%Y' }} {{ site.name }}</rights>
-  <subtitle>{{- site.description | xml_escape -}}</subtitle>
   {% for video in site.data.videos %}
     <entry>
       <id>https://www.youtube.com/watch?v={{- video.id -}}</id>
-      <title>{{ video.title | xml_escape }} by {{ video.artist | xml_escape }} - Drum cover by {{ site.author | xml_escape }}</title>
-      <updated>{{- video.date -}}</updated>
+      <title>{{ video.title | xml_escape }} by {{ video.artist | xml_escape }}</title>
+      <summary>Drum cover by {{ site.author | xml_escape }}</summary>
+      <category term="music" label="Music"/>
+      <link rel="alternate" href="https://www.youtube.com/watch?v={{- video.id -}}"/>
       <author>
         <name>{{- site.author | xml_escape -}}</name>
       </author>
-      <link rel="alternate" href="https://www.youtube.com/watch?v={{- video.id -}}"/>
-      <category term="music" label="Music"/>
-      <published>{{- video.date -}}</published>
+      <published>{{- video.datetime | date: site.datetime_format -}}</published>
+      <updated>{{- video.datetime | date: site.datetime_format -}}</updated>
       <rights type="html">&amp;copy; {{ video.date | date: '%Y' }} {{ site.name }}</rights>
     </entry>
   {% endfor %}

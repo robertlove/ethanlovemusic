@@ -6,7 +6,7 @@
   "name": "{{- site.name -}}",
   "short_name": "{{- site.name -}}",
   "icons": [{
-    "src": "{{ '/icon.png' | relative_url }}",
+    "src": "{{ '/assets/img/icon.png' | relative_url }}",
     "sizes": "180x180",
     "type": "image/png"
   }],
