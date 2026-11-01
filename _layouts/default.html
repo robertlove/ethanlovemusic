@@ -1,4 +1,4 @@
-{%- assign site_name = site.title -%}
+{%- assign site_name = site.name -%}
 {%- assign title = site_name -%}
 {%- assign description = site.description -%}
 {%- assign url = site.url -%}
@@ -34,21 +34,23 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="{{ site_name }}">
     <meta property="og:locale" content="{{- site.lang -}}_{{- site.region -}}">
+    <meta name="apple-mobile-web-app-title" content="{{ site_name }}">
     <link rel="icon" type="image/svg+xml" href="{{ '/assets/img/icon.svg' | relative_url }}">
-    <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/icon.png' | relative_url }}">
+    <link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{- site.time | date: '%s' -}}">
     <title>{{ title }}</title>
   </head>
   <body>
     <header class="navbar navbar-translucent sticky-top">
       <div class="container">
-        <a class="navbar-brand" href="{{ '/' | relative_url }}">{{- site.title -}}</a>
+        <a class="navbar-brand" href="{{ '/' | relative_url }}">{{- site.name -}}</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </button>
         <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavMenu" aria-labelledby="navbarNavMenuLabel">
           <div class="drawer-header">
-            <h2 class="drawer-title fs-md" id="navbarNavMenuLabel">{{- site.title -}}</h2>
+            <h2 class="drawer-title fs-md" id="navbarNavMenuLabel">{{- site.name -}}</h2>
             <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
           </div>
           <div class="drawer-body">
