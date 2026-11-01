@@ -14,7 +14,7 @@ layout: default
       <div class="col">
         <div class="card h-100">
           <a href="https://www.youtube.com/watch?v={{- video.id -}}" target="_blank">
-            <img class="card-img-top" src="https://i.ytimg.com/vi_webp/{{- video.id -}}/maxresdefault.webp" alt="{{ video.title | escape }} by {{ video.artist | escape }} - Drum cover by Ethan Love">
+            <img class="card-img-top" src="{{- '/assets/img/thumbnails/' | append: video.id | append: '.webp' | relative_url -}}" alt="{{ video.title | escape }} by {{ video.artist | escape }} - Drum cover by Ethan Love">
           </a>
           <div class="card-body">
             <h3 class="card-title fs-md mb-8">{{ video.title | escape }} by {{ video.artist | escape }}</h3>

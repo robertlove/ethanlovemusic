@@ -13,7 +13,6 @@
   <icon>{{- '/assets/img/icon.svg' | relative_url -}}</icon>
   <rights type="html">&amp;copy; {{ site.data.videos.first.date | date: '%Y' }} {{ site.title }}</rights>
   <subtitle>{{- site.description | xml_escape -}}</subtitle>
-
   {% for video in site.data.videos %}
     <entry>
       <id>https://www.youtube.com/watch?v={{- video.id -}}</id>
@@ -28,5 +27,4 @@
       <rights type="html">&amp;copy; {{ video.date | date: '%Y' }} {{ site.title }}</rights>
     </entry>
   {% endfor %}
-
 </feed>
