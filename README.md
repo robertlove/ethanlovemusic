@@ -1,6 +1,6 @@
 # Ethan Love Music
 
-Multi-instrumentalist in Sydney, Australia. Drums, guitar, bass, and keyboards. Covers and original compositions. @ethanlove.music.
+Multi-instrumentalist in Sydney, Australia. Drums, guitar, bass, and keyboards. Covers and original compositions.
 
 ## Installation
 
