@@ -4,7 +4,7 @@
   "lang": "{{- site.lang -}}",
   "dir": "ltr",
   "name": "{{- site.name -}}",
-  "short_name": "{{- site.name -}}",
+  "short_name": "{{- site.short_name -}}",
   "icons": [{
     "src": "{{ '/assets/img/icon.png' | relative_url }}",
     "sizes": "180x180",
